@@ -10,7 +10,20 @@ createApp({
         }
     },
     methods: {
-
+        prevImg() {
+            if (this.activeId > 0) {
+                this.activeId--
+            } else {
+                this.activeId = slides.length - 1
+            }
+        },
+        nextImg() {
+            if (this.activeId < slides.length - 1) {
+                this.activeId++
+            } else {
+                this.activeId = 0
+            }
+        }
     },
     mounted() {
 
