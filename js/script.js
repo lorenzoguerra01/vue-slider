@@ -23,6 +23,9 @@ createApp({
             } else {
                 this.activeId = 0
             }
+        },
+        currentImg(index) {
+            this.activeId = index
         }
     },
     mounted() {
