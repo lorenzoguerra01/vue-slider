@@ -1,14 +1,18 @@
-import {} from './utility.js';
-import {slides} from './data.js';
+import { } from './utility.js';
+import { slides } from './data.js';
 
-const {createApp} = Vue;
+const { createApp } = Vue;
 createApp({
-    data(){
-        return{
-            message : 'Hello world!!!'
+    data() {
+        return {
+            slides,
+            activeId: 0
         }
     },
-    methods :{
+    methods: {
+
+    },
+    mounted() {
 
     }
 }).mount('#app');
