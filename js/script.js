@@ -6,7 +6,8 @@ createApp({
     data() {
         return {
             slides,
-            activeId: 0
+            activeId: 0,
+            autoPlay: null
         }
     },
     methods: {
@@ -26,9 +27,15 @@ createApp({
         },
         currentImg(index) {
             this.activeId = index
+        },
+        startAutoPlay() {
+            this.autoPlay = setInterval(this.nextImg, 3000)
+        },
+        stopAutoPlay() {
+            clearInterval(this.autoPlay)
         }
     },
     mounted() {
-
+        startAutoPlay()
     }
 }).mount('#app');
