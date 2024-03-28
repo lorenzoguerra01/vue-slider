@@ -36,6 +36,6 @@ createApp({
         }
     },
     mounted() {
-        startAutoPlay()
+        this.startAutoPlay()
     }
 }).mount('#app');
